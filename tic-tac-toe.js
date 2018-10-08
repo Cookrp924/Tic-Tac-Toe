@@ -17,6 +17,7 @@ var columns = [ [letters[0], letters[3], letters[6]],
 			    [letters[2], letters[5], letters[8]] ];
 
 
+//starting player vs. player game
 $(pvp).click(function(){
 	start();
 	swal({
@@ -37,10 +38,14 @@ $(pvp).click(function(){
 				check();
 				i++;
 			});
+			//am confused here. for(i === 0 || i % 2 === 0) it would make sense that X should be displayed, as X gets the
+			//first turn, third, and so on (with var i starting at 0). the opposite appears to be true. this action works,
+			//but I don't understand why
 		})(i)
 	}
 })
 
+//starting a game vs 'computer'
 $(vsComp).click(function(){
 	start();
 	swal({
